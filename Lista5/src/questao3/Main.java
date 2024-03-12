@@ -9,7 +9,6 @@ public class Main {
         int opcao;
         do{
             opcao = memu();
-            Sys
         } while(opcao != 0);
     }
     public static int memu() {

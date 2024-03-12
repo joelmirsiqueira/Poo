@@ -14,13 +14,13 @@ public class Questao1 {
 
 	}
 
-	private static String salarioAlto(String[] nomes, float[] salarios) {
-		String resultado = "";
+	// private static String salarioAlto(String[] nomes, float[] salarios) {
+	// 	String resultado = "";
 
-		for (int i = 0; i < nomes.length; i++) {
-			if (salarios[i] > 5000) {
-				resultado += nomes[i] + ": R$ " + salarios[i];
-			}
-		}
-	}
+	// 	for (int i = 0; i < nomes.length; i++) {
+	// 		if (salarios[i] > 5000) {
+	// 			resultado += nomes[i] + ": R$ " + salarios[i];
+	// 		}
+	// 	}
+	// }
 }
