@@ -9,7 +9,7 @@ public class Main {
         int opcao;
         do{
             opcao = memu();
-            Sys
+            
         } while(opcao != 0);
     }
     public static int memu() {
@@ -23,6 +23,7 @@ public class Main {
         System.out.println("0. Sair");
         
         opcao = sc.nextInt();
+        sc.close();
         switch(opcao){
             case 1:
                 System.out.print("Raio do círculo: ");

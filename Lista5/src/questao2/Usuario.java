@@ -27,6 +27,7 @@ public class Usuario {
 				base = sc.nextFloat();
 				System.out.print("informe o valor da altura: ");
 				altura = sc.nextFloat();
+				sc.close();
 				re.setAltura(altura);
 				re.setBase(base);
 				break;
