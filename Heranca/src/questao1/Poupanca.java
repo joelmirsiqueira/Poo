@@ -1,18 +1,18 @@
 package questao1;
 
 public class Poupanca extends ContaBancaria {
-	private int diaRendimento;
+	private double taxa;
 
-	public Poupanca(String nomeCliente, int numConta, int diaRendimento) {
+	public Poupanca(String nomeCliente, int numConta, double taxa) {
 		super(nomeCliente, numConta);
-		this.diaRendimento = diaRendimento;
+		this.taxa = taxa;
 	}
 
-	public Poupanca(String nomeCliente, int numConta, double saldo, int diaRendimento) {
+	public Poupanca(String nomeCliente, int numConta, double saldo, double diaRendimento) {
 		super(nomeCliente, numConta, saldo);
-		this.diaRendimento = diaRendimento;
+		this.taxa = diaRendimento;
 	}
-	public void calcularNovoSaldo(double taxa) {
-		this.saldo += this.saldo * taxa;
+	public void calcularNovoSaldo() {
+		this.saldo += this.saldo * this.taxa;
 	}
 }

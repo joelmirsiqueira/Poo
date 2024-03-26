@@ -22,6 +22,7 @@ public class ContaBancaria {
 	public void sacar(double saque) {
 		if(this.saldo >= saque) {
 			this.saldo -= saque;
+			System.out.println("Saque efetuado");
 		} else {
 			System.out.println("Saldo insuficiente");
 		}

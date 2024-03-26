@@ -14,6 +14,7 @@ public class ContaEspecial extends ContaBancaria {
 	public void sacar(double saque) {
 		if((this.saldo + this.limite) >= saque) {
 			this.saldo -= saque;
+			System.out.println("Saque efetuado");
 		} else {
 			System.out.println("limite insuficiente");
 		}
