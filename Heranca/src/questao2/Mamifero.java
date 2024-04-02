@@ -13,6 +13,7 @@ public class Mamifero extends Animal {
 		this.caracteristicas = "alimento preferido";
 	}
 
+
 	public Mamifero(String nome, double comprimento, String cor, String ambiente, double velocidade) {
 		super(nome, comprimento, cor, ambiente, velocidade);
 		this.caracteristicas = "alimento preferido";
@@ -31,4 +32,12 @@ public class Mamifero extends Animal {
 		this.caracteristicas = caracteristicas;
 	}
 
-}
+	@Override
+	public String toString() {
+		return "Mamifero [nome=" + nome + ", comprimento=" + comprimento + ", numPatas=" + numPatas + ", cor=" + cor
+				+ ", ambiente=" + ambiente + ", velocidade=" + velocidade + ", caracteristicas=" + caracteristicas
+				+ "]";
+	}
+
+
+ }

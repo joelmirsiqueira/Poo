@@ -12,33 +12,33 @@ public class Teste {
 		int opcao;
 		do {
 			opcao = menu();
+			switch(opcao) {
+			case 1:
+				incluirPeixe();
+				break;
+			
+			case 2:
+				incluirMamifero();
+				break;
+			
+			case 3:
+				listarAnimais();
+				break;
+			case 4:
+				listarPeixes();
+				break;
+			
+			case 0:
+				System.out.println("Programa finalizado!");
+				break;
+			
+			default:
+				System.out.println("Opção inválida.");
+				break;
+			}
 		} while(opcao != 0);
-		switch(opcao) {
-		case 1:
-			incluirPeixe();
-			break;
-			
-		case 2:
-			incluirMamifero();
-			break;
-			
-		case 3:
-			listarAnimais();
-			break;
-			
-		case 4:
-			listarPeixes();
-			break;
-			
-		case 0:
-			sair();
-			break;
-			
-		default:
-			System.out.println("Opção inválida.");
-			break;
-		}
 	}
+	
 	public static int menu() {
 		int opcao;
 		System.out.println("Menu:");
@@ -53,30 +53,47 @@ public class Teste {
 		sc.nextLine();
 		return opcao;
 	}
+	
 	public static void incluirPeixe() {
 		System.out.print("Nome: ");
 		String nome = sc.nextLine();
 		System.out.print("Comprimento: ");
-		float comprimento = sc.nextFloat();
+		double comprimento = sc.nextFloat();
 		System.out.print("Velocidade: ");
-		float velocidade = sc.nextFloat();
-		System.out.print("Barbatanas: ");
-		boolean barbatanas = sc.nextBoolean();
-		System.out.print("Cauda: ");
-		boolean cauda = sc.nextBoolean();
-		animalAtivo = new Peixe(nome, comprimento, velocidade, barbatanas, cauda);
+		double velocidade = sc.nextFloat();
+		sc.nextLine();
+		animalAtivo = new Peixe(nome, comprimento, velocidade);
 		animais.add(animalAtivo);
 	}
+	
 	public static void incluirMamifero() {
 		System.out.print("Nome: ");
 		String nome = sc.nextLine();
 		System.out.print("Comprimento: ");
-		float comprimento = sc.nextFloat();
-		System.out.print("Número de patas: ");
-		int numPatas = sc.nextInt();
-		
-		
-		//animalAtivo = new Mamifero(nome, comprimento, numPatas, cor, velocidade, alimentoPreferido);
+		double comprimento = sc.nextFloat();
+		sc.nextLine();
+		System.out.print("Cor: ");
+		String cor = sc.nextLine();
+		System.out.print("Velocidade: ");
+		double velocidade = sc.nextDouble();
+		sc.nextLine();
+		animalAtivo = new Mamifero(nome, comprimento, cor, velocidade);
 		animais.add(animalAtivo);
 	}
+	
+	public static void listarAnimais() {
+		for (Animal animal : animais) {
+			System.out.println(animal);
+		}
+	}
+	
+	public static void listarPeixes() {
+		for(Animal animal: animais) {
+			if(animal instanceof Peixe) {
+				animal = (Peixe) animal;
+				System.out.println(animal);
+			}
+		}
+	}
+
 }
