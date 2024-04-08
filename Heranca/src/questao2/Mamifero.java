@@ -8,20 +8,6 @@ public class Mamifero extends Animal {
 		this.caracteristicas = "alimento preferido";
 	}
 
-	public Mamifero(String nome, double comprimento, int numPatas, String cor, double velocidade) {
-		super(nome, comprimento, numPatas, cor, "terra", velocidade);
-		this.caracteristicas = "alimento preferido";
-	}
-
-	public Mamifero(String nome, double comprimento, String cor, String ambiente, double velocidade) {
-		super(nome, comprimento, cor, ambiente, velocidade);
-		this.caracteristicas = "alimento preferido";
-	}
-
-	public Mamifero(String nome, double comprimento, int numPatas, String cor, String ambiente, double velocidade) {
-		super(nome, comprimento, numPatas, cor, ambiente, velocidade);
-		this.caracteristicas = "alimento preferido";
-	}
 
 	public String getcaracteristicas() {
 		return caracteristicas;

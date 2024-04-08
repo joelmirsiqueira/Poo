@@ -18,16 +18,6 @@ public class Animal {
 		this.velocidade = velocidade;
 	}
 
-	public Animal(String nome, double comprimento, int numPatas, String cor, String ambiente, double velocidade) {
-		super();
-		this.nome = nome;
-		this.comprimento = comprimento;
-		this.numPatas = numPatas;
-		this.cor = cor;
-		this.ambiente = ambiente;
-		this.velocidade = velocidade;
-	}
-
 	public String getNome() {
 		return nome;
 	}
