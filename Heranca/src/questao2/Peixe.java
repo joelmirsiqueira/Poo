@@ -9,13 +9,23 @@ public class Peixe extends Animal {
 		this.caracteristicas = "barbatanas e cauda";
 	}
 
-	public String getCaracterirticas() {
+	public String getCaracteristicas() {
 		return caracteristicas;
 	}
 
-	public void setCaracterirticas(String caracterirticas) {
-		this.caracteristicas = caracterirticas;
+	public void setCaracteristicas(String caracteristicas) {
+		this.caracteristicas = caracteristicas;
 	}
+
+	@Override
+	public String toString() {
+		return "Peixe [nome=" + nome + ", comprimento=" + comprimento + ", numPatas=" + numPatas + ", cor=" + cor
+				+ ", ambiente=" + ambiente + ", velocidade=" + velocidade + ", caracteristicas=" + caracteristicas
+				+ "]";
+	}
+
+
+	
 
 	
 }

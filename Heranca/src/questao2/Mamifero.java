@@ -17,4 +17,12 @@ public class Mamifero extends Animal {
 		this.caracteristicas = caracteristicas;
 	}
 
-}
+	@Override
+	public String toString() {
+		return "Mamifero [nome=" + nome + ", comprimento=" + comprimento + ", numPatas=" + numPatas + ", cor=" + cor
+				+ ", ambiente=" + ambiente + ", velocidade=" + velocidade + ", caracteristicas=" + caracteristicas
+				+ "]";
+	}
+
+
+ }

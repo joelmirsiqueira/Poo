@@ -1,5 +1,6 @@
 package questao2;
 
+
 public class Animal {
 	protected String nome;
 	protected double comprimento;
@@ -65,5 +66,14 @@ public class Animal {
 	public void setVelocidade(double velocidade) {
 		this.velocidade = velocidade;
 	}
+
+	@Override
+	public String toString() {
+		return "Animal [nome=" + nome + ", comprimento=" + comprimento + ", numPatas=" + numPatas + ", cor=" + cor
+				+ ", ambiente=" + ambiente + ", velocidade=" + velocidade + "]";
+	}
+
+
+
 
 }
